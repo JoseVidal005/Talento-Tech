@@ -1,0 +1,205 @@
+Microsoft Windows [Versión 10.0.19045.5011]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git init
+Initialized empty Git repository in D:/Talento Tech/Sesion 6/Laboratorio 6/.git/
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git add index.html
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git commit -m "Version con index.html y titulo primario"
+[master (root-commit) 1d5f4b4] Version con index.html y titulo primario
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git add .
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git commit -m "Nueva version desarrollada incluye titulo h3"
+[master bbc1a83] Nueva version desarrollada incluye titulo h3
+ 1 file changed, 1 insertion(+)
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git log
+commit bbc1a835f654a6e176289992b66db84121a4b394 (HEAD -> master)
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:05:54 2024 -0500
+
+    Nueva version desarrollada incluye titulo h3
+
+commit 1d5f4b4f54fcdda211b306ed07ee61ed13718fd3
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:00:23 2024 -0500
+
+    Version con index.html y titulo primario
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git branch
+* master
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git branch rama-version-3
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git branch
+* master
+  rama-version-3
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout rama-version-3
+Switched to branch 'rama-version-3'
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git branch
+  master
+* rama-version-3
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch rama-version-3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git add .
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch rama-version-3
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git commit -m"Version 3 rama-version-3 titulo h4"
+[rama-version-3 accb93f] Version 3 rama-version-3 titulo h4
+ 1 file changed, 1 insertion(+)
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git log
+commit accb93f774cd402af9b7663256afa20b780d5b97 (HEAD -> rama-version-3)
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:12:44 2024 -0500
+
+    Version 3 rama-version-3 titulo h4
+
+commit bbc1a835f654a6e176289992b66db84121a4b394 (master)
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:05:54 2024 -0500
+
+    Nueva version desarrollada incluye titulo h3
+
+commit 1d5f4b4f54fcdda211b306ed07ee61ed13718fd3
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:00:23 2024 -0500
+
+    Version con index.html y titulo primario
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git merge master
+Already up to date.
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>code .
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>code .
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout master
+Switched to branch 'master'
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git merge rama-verion-3
+merge: rama-verion-3 - not something we can merge
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>code .
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout rama-version-3
+Switched to branch 'rama-version-3'
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>code .
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch rama-version-3
+nothing to commit, working tree clean
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout master
+Switched to branch 'master'
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git checkout master
+Already on 'master'
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git merge rama-version-3
+Updating bbc1a83..accb93f
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git log
+commit accb93f774cd402af9b7663256afa20b780d5b97 (HEAD -> master, rama-version-3)
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:12:44 2024 -0500
+
+    Version 3 rama-version-3 titulo h4
+
+commit bbc1a835f654a6e176289992b66db84121a4b394
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:05:54 2024 -0500
+
+    Nueva version desarrollada incluye titulo h3
+
+commit 1d5f4b4f54fcdda211b306ed07ee61ed13718fd3
+Author: JoseVidal005 <jdavidvidal@unicesar.edu.co>
+Date:   Tue Nov 12 22:00:23 2024 -0500
+
+    Version con index.html y titulo primario
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git remote add origin https://github.com/JoseVidal005/Talento-Tech.git
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 1011 bytes | 337.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/JoseVidal005/Talento-Tech.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\Talento Tech\Sesion 6\Laboratorio 6>
